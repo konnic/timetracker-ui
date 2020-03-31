@@ -1,0 +1,70 @@
+$directions: top, bottom, left, right;
+$steps: 1, 2, 3;
+
+@mixin calcMarginPadding($prefix, $target) {
+  @each $step in $steps {
+    .#{$prefix}-#{$step} {
+      #{$target}: #{$step}rem;
+    }
+    .#{$prefix}-#{$step - 1}5 {
+      #{$target}: $step*1rem - $step*.5;
+    }
+  }
+}
+
+@mixin calcMarginPaddingSingleDirection($prefix, $target, $direction) {
+  @each $step in $steps {
+    .#{$prefix}-#{$step}-#{$direction} {
+      #{$target}-#{$direction}: #{$step}rem;
+    }
+    .#{$prefix}-#{$step - 1}5-#{$direction} {
+      #{$target}-#{$direction}: $step*16px - $step*8;
+    }
+  }
+}
+
+@mixin calcMarginPaddingXY(){
+  @each $step in $steps {
+    .m-#{$step}-x {
+      margin: 0 #{$step}rem;
+    }
+    .m-#{$step - 1}5-x {
+      margin: 0 $step*1rem - $step*.5;
+    }
+    .m-#{$step}-y {
+      margin: #{$step}rem 0;
+    }
+    .m-#{$step - 1}5-y {
+      margin: $step*1rem - $step*.5 0;
+    }
+    .p-#{$step}-x {
+      padding: 0 #{$step}rem;
+    }
+    .p-#{$step - 1}5-x {
+      padding: 0 $step*1rem - $step*.5;
+    }
+    .p-#{$step}-y {
+      padding: #{$step}rem 0;
+    }
+    .p-#{$step - 1}5-y {
+      padding: $step*1rem - $step*.5 0;
+    }
+  }
+}
+
+@include calcMarginPadding(m, margin);
+@include calcMarginPadding(p, padding);
+
+@include calcMarginPaddingXY();
+
+@each $direction in $directions {
+  @include calcMarginPaddingSingleDirection(m, margin, $direction)
+}
+
+@each $direction in $directions {
+  @include calcMarginPaddingSingleDirection(p, padding, $direction)
+}
+
+
+
+

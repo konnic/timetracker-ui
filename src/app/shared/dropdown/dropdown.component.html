@@ -1,0 +1,16 @@
+<button (click)="toggleDisplay()"
+        type="button"
+        class="d-flex flex-dir-row secondary-bg-color p-05 hover-effect reset-border-styles main-font"
+        style="justify-content: space-between; line-height: 20px; width:100%;">
+  <span>{{selection || 'Click to select a value'}}</span>
+  <img [src]="arrowDownSrc" [alt]="'arrow button'" class="icon-size">
+</button>
+<div class="z-index-1 position-absolute">
+  <option *ngFor="let dayOption of dropdownData"
+          [hidden]="hideOptions"
+          [value]="dayOption"
+          (click)="onOptionSelect(dayOption)"
+          class="active-item-bg-color hover-special p-05">
+    {{dayOption}}
+  </option>
+</div>

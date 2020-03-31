@@ -1,0 +1,24 @@
+<div class="p-1 secondary-bg-color">
+  <div class="position-relative">
+    <div [formGroup]="timeInputForm" class="secondary-bg-color d-flex flex-dir-col flex-1">
+      <button (mouseover)="showSetCurrentTimeText ? toggleTitle() : null"
+              (mouseleave)="showSetCurrentTimeText ? toggleTitle() : null"
+              (click)="showSetCurrentTimeText ? onSetCurrentTime() : null"
+              [ngClass]="{'hover-effect': showSetCurrentTimeText}"
+              type="button"
+              class="text-center reset-border-styles main-font secondary-bg-color p-05 m-1-bottom">
+        {{title}}
+      </button>
+      <input [formControlName]="formCtrName"
+             [attr.maxlength]="5"
+             [readOnly]="isReadOnly"
+             [placeholder]="'HH:MM'"
+             [value]="time"
+             (focus)="toggleFocusBar()"
+             (keyup)="addColon($event)"
+             (blur)="updateTime(); toggleFocusBar()"
+             class="main-font main-bg-color reset-border-styles p-05-y text-center">
+    </div>
+    <span *ngIf="activeInput" class="focus-bar"></span>
+  </div>
+</div>

@@ -1,0 +1,154 @@
+@import "./../node_modules/primeicons/primeicons.css";
+@import "./../node_modules/primeng/resources/themes/nova-light/theme.css";
+@import "./../node_modules/primeng/resources/primeng.min.css";
+@import "./styles/variables";
+@import "./styles/resets";
+@import "./styles/margins-paddings";
+@import "./styles/primeng-resets";
+
+
+.main-font {
+  font-family: Menlo;
+  text-transform: uppercase;
+  font-size: $main-font-size;
+  color: $font-color;
+}
+
+.description-font {
+  @extend .main-font;
+  font-size: $desc-font-size;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.time-width {
+  width: 24px;
+}
+
+.main-bg-color {
+  background-color: $main-bg-color;
+}
+
+.secondary-bg-color {
+  background-color: $secondary-bg-color;
+}
+
+.active-item-bg-color {
+  background-color: $active-item-bg-color;
+}
+
+.time-input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  flex: 1;
+}
+
+.d-flex {
+  display: flex;
+}
+
+flex-1 {
+  flex: 1;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.flex-dir-row {
+  flex-direction: row;
+}
+
+.flex-dir-col {
+  flex-direction: column;
+}
+
+.d-flex-justify-center {
+  justify-content: center;
+}
+
+.d-flex-align-center {
+  align-content: center;
+}
+
+.hover-effect {
+  &:hover{
+    background-color: $hover-color;
+    cursor: pointer;
+  }
+}
+
+.hover-special {
+  &:hover{
+    background-color: $hover-special;
+    cursor: pointer;
+  }
+}
+
+.focus-bar {
+  display: block;
+  position: absolute;
+  background-color: $focus-bar-color;
+  width: 100%;
+  height: 2px;
+  bottom: 0px;
+}
+
+.navbar-container {
+  display: grid;
+  grid-template-columns: 33.33% auto 33.33%;
+  justify-items: stretch;
+  font-size: $nav-bar-font-size;
+}
+
+.navbar-content {
+  text-align: center;
+  &:hover {
+    @extend .hover-effect;
+  }
+}
+
+.navbar-border-center {
+  border-left: 1px solid #8E8E8E;
+  border-right: 1px solid #8E8E8E;
+}
+
+.active-nav-item {
+  border-bottom: 4px solid $focus-bar-color;
+  background-color: $active-item-bg-color;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.icon-size {
+  height: 20px;
+  width: 20px;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.disabled-button {
+  background-color: $disabled-item-bg-color;
+  color: $disabled-item-font-color
+}
+
+.textarea {
+  max-height: 32px;
+}

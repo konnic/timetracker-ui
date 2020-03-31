@@ -1,0 +1,565 @@
+@import "./../node_modules/primeicons/primeicons.css";
+@import "./../node_modules/primeng/resources/themes/nova-light/theme.css";
+@import "./../node_modules/primeng/resources/primeng.min.css";
+/*remove blue highlighting of element in focus*/
+*:focus {
+  outline: 0;
+  outline: none;
+}
+
+.reset-body-styles {
+  margin: 0;
+  padding: 0;
+}
+
+.reset-border-styles {
+  border: 0;
+  border-radius: 0px;
+}
+
+.reset-dropdown-styles {
+  -webkit-appearance: none;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.m-05 {
+  margin: 0.5rem;
+}
+
+.m-2 {
+  margin: 2rem;
+}
+
+.m-15 {
+  margin: 1rem;
+}
+
+.m-3 {
+  margin: 3rem;
+}
+
+.m-25 {
+  margin: 1.5rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-05 {
+  padding: 0.5rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-15 {
+  padding: 1rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.p-25 {
+  padding: 1.5rem;
+}
+
+.m-1-x {
+  margin: 0 1rem;
+}
+
+.m-05-x {
+  margin: 0 0.5rem;
+}
+
+.m-1-y {
+  margin: 1rem 0;
+}
+
+.m-05-y {
+  margin: 0.5rem 0;
+}
+
+.p-1-x {
+  padding: 0 1rem;
+}
+
+.p-05-x {
+  padding: 0 0.5rem;
+}
+
+.p-1-y {
+  padding: 1rem 0;
+}
+
+.p-05-y, body .ui-button.ui-button-text-only .ui-button-text {
+  padding: 0.5rem 0;
+}
+
+.m-2-x {
+  margin: 0 2rem;
+}
+
+.m-15-x {
+  margin: 0 1rem;
+}
+
+.m-2-y {
+  margin: 2rem 0;
+}
+
+.m-15-y {
+  margin: 1rem 0;
+}
+
+.p-2-x {
+  padding: 0 2rem;
+}
+
+.p-15-x {
+  padding: 0 1rem;
+}
+
+.p-2-y {
+  padding: 2rem 0;
+}
+
+.p-15-y {
+  padding: 1rem 0;
+}
+
+.m-3-x {
+  margin: 0 3rem;
+}
+
+.m-25-x {
+  margin: 0 1.5rem;
+}
+
+.m-3-y {
+  margin: 3rem 0;
+}
+
+.m-25-y {
+  margin: 1.5rem 0;
+}
+
+.p-3-x {
+  padding: 0 3rem;
+}
+
+.p-25-x {
+  padding: 0 1.5rem;
+}
+
+.p-3-y {
+  padding: 3rem 0;
+}
+
+.p-25-y {
+  padding: 1.5rem 0;
+}
+
+.m-1-top {
+  margin-top: 1rem;
+}
+
+.m-05-top {
+  margin-top: 8px;
+}
+
+.m-2-top {
+  margin-top: 2rem;
+}
+
+.m-15-top {
+  margin-top: 16px;
+}
+
+.m-3-top {
+  margin-top: 3rem;
+}
+
+.m-25-top {
+  margin-top: 24px;
+}
+
+.m-1-bottom {
+  margin-bottom: 1rem;
+}
+
+.m-05-bottom {
+  margin-bottom: 8px;
+}
+
+.m-2-bottom {
+  margin-bottom: 2rem;
+}
+
+.m-15-bottom {
+  margin-bottom: 16px;
+}
+
+.m-3-bottom {
+  margin-bottom: 3rem;
+}
+
+.m-25-bottom {
+  margin-bottom: 24px;
+}
+
+.m-1-left {
+  margin-left: 1rem;
+}
+
+.m-05-left {
+  margin-left: 8px;
+}
+
+.m-2-left {
+  margin-left: 2rem;
+}
+
+.m-15-left {
+  margin-left: 16px;
+}
+
+.m-3-left {
+  margin-left: 3rem;
+}
+
+.m-25-left {
+  margin-left: 24px;
+}
+
+.m-1-right {
+  margin-right: 1rem;
+}
+
+.m-05-right {
+  margin-right: 8px;
+}
+
+.m-2-right {
+  margin-right: 2rem;
+}
+
+.m-15-right {
+  margin-right: 16px;
+}
+
+.m-3-right {
+  margin-right: 3rem;
+}
+
+.m-25-right {
+  margin-right: 24px;
+}
+
+.p-1-top {
+  padding-top: 1rem;
+}
+
+.p-05-top {
+  padding-top: 8px;
+}
+
+.p-2-top {
+  padding-top: 2rem;
+}
+
+.p-15-top {
+  padding-top: 16px;
+}
+
+.p-3-top {
+  padding-top: 3rem;
+}
+
+.p-25-top {
+  padding-top: 24px;
+}
+
+.p-1-bottom {
+  padding-bottom: 1rem;
+}
+
+.p-05-bottom {
+  padding-bottom: 8px;
+}
+
+.p-2-bottom {
+  padding-bottom: 2rem;
+}
+
+.p-15-bottom {
+  padding-bottom: 16px;
+}
+
+.p-3-bottom {
+  padding-bottom: 3rem;
+}
+
+.p-25-bottom {
+  padding-bottom: 24px;
+}
+
+.p-1-left {
+  padding-left: 1rem;
+}
+
+.p-05-left {
+  padding-left: 8px;
+}
+
+.p-2-left {
+  padding-left: 2rem;
+}
+
+.p-15-left {
+  padding-left: 16px;
+}
+
+.p-3-left {
+  padding-left: 3rem;
+}
+
+.p-25-left {
+  padding-left: 24px;
+}
+
+.p-1-right {
+  padding-right: 1rem;
+}
+
+.p-05-right {
+  padding-right: 8px;
+}
+
+.p-2-right {
+  padding-right: 2rem;
+}
+
+.p-15-right {
+  padding-right: 16px;
+}
+
+.p-3-right {
+  padding-right: 3rem;
+}
+
+.p-25-right {
+  padding-right: 24px;
+}
+
+/* TODO: find a better solution to overwrite the primeng styles and include descriptive comments */
+/* primeng resets */
+body .ui-datepicker {
+  background-color: #1F1F1F;
+}
+
+body .ui-corner-all {
+  border-radius: 0;
+  border: 0;
+}
+
+body .ui-datepicker {
+  color: #FFFFFF;
+  padding: 0;
+}
+
+body .ui-datepicker table td > a, body .ui-datepicker table td > span {
+  color: #FFFFFF;
+}
+
+body .ui-datepicker .ui-datepicker-header {
+  background-color: #1F1F1F;
+  color: #FFFFFF;
+}
+
+body .ui-datepicker table td > a.ui-state-active, body .ui-datepicker table td > span.ui-state-active {
+  background-color: #1A93FF;
+}
+
+body .ui-datepicker table td.ui-datepicker-today > a, body .ui-datepicker table td.ui-datepicker-today > span {
+  background-color: #5D5D5D;
+  color: #FFFFFF;
+}
+
+body .ui-datepicker:not(.ui-state-disabled) table td a:not(.ui-state-active):not(.ui-state-highlight):hover {
+  background-color: #5D5D5D;
+}
+
+body .ui-datepicker table td > a, body .ui-datepicker table td > span {
+  border-radius: 0;
+}
+
+body .ui-datepicker:not(.ui-state-disabled) .ui-datepicker-header .ui-datepicker-prev:hover, body .ui-datepicker:not(.ui-state-disabled) .ui-datepicker-header .ui-datepicker-next:hover {
+  color: #1A93FF;
+}
+
+body .ui-datepicker:not(.ui-state-disabled) .ui-datepicker-header .ui-datepicker-prev:focus, body .ui-datepicker:not(.ui-state-disabled) .ui-datepicker-header .ui-datepicker-next:focus {
+  box-shadow: none;
+}
+
+.ui-datepicker .ui-datepicker-buttonbar {
+  padding: 0;
+}
+
+.ui-g-6 button {
+  width: 100%;
+}
+
+body .ui-button.ui-state-default.ui-button-secondary, body .ui-buttonset.ui-button-secondary > .ui-button.ui-state-default {
+  background-color: #1F1F1F;
+  color: #FFFFFF;
+  border: 0;
+}
+
+body .ui-button.ui-state-default.ui-button-secondary:enabled:hover, body .ui-buttonset.ui-button-secondary > .ui-button.ui-state-default:enabled:hover {
+  color: #FFFFFF;
+}
+
+.main-font, .description-font, .ui-g-6 button {
+  font-family: Menlo;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.description-font {
+  font-size: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.time-width {
+  width: 24px;
+}
+
+.main-bg-color {
+  background-color: #1F1F1F;
+}
+
+.secondary-bg-color {
+  background-color: #5D5D5D;
+}
+
+.active-item-bg-color {
+  background-color: #767676;
+}
+
+.time-input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  flex: 1;
+}
+
+.d-flex {
+  display: flex;
+}
+
+flex-1 {
+  flex: 1;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.flex-dir-row {
+  flex-direction: row;
+}
+
+.flex-dir-col {
+  flex-direction: column;
+}
+
+.d-flex-justify-center {
+  justify-content: center;
+}
+
+.d-flex-align-center {
+  align-content: center;
+}
+
+.hover-effect:hover, .navbar-content:hover, body .ui-button.ui-state-default.ui-button-secondary:hover:enabled, body .ui-buttonset.ui-button-secondary > .ui-button.ui-state-default:hover:enabled {
+  background-color: #8E8E8E;
+  cursor: pointer;
+}
+
+.hover-special:hover {
+  background-color: #1A93FF;
+  cursor: pointer;
+}
+
+.focus-bar {
+  display: block;
+  position: absolute;
+  background-color: #1A93FF;
+  width: 100%;
+  height: 2px;
+  bottom: 0px;
+}
+
+.navbar-container {
+  display: grid;
+  grid-template-columns: 33.33% auto 33.33%;
+  justify-items: stretch;
+  font-size: 18px;
+}
+
+.navbar-content {
+  text-align: center;
+}
+.navbar-border-center {
+  border-left: 1px solid #8E8E8E;
+  border-right: 1px solid #8E8E8E;
+}
+
+.active-nav-item {
+  border-bottom: 4px solid #1A93FF;
+  background-color: #767676;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.icon-size {
+  height: 20px;
+  width: 20px;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.disabled-button {
+  background-color: #5D5D5D;
+  color: #767676;
+}
+
+.textarea {
+  max-height: 32px;
+}
+
+/*# sourceMappingURL=styles.css.map */

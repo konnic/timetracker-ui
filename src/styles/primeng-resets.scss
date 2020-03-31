@@ -1,0 +1,74 @@
+/* TODO: find a better solution to overwrite the primeng styles and include descriptive comments */
+
+/* primeng resets */
+body .ui-datepicker {
+  background-color: $main-bg-color;
+}
+
+body .ui-corner-all {
+  border-radius: 0;
+  border: 0;
+}
+
+body .ui-datepicker {
+  color: #FFFFFF;
+  padding: 0;
+}
+
+body .ui-datepicker table td > a, body .ui-datepicker table td > span {
+  color: #FFFFFF;
+}
+
+body .ui-datepicker .ui-datepicker-header {
+  background-color: $main-bg-color;
+  color: #FFFFFF;
+}
+
+body .ui-datepicker table td > a.ui-state-active, body .ui-datepicker table td > span.ui-state-active {
+  background-color: $hover-special;
+}
+
+body .ui-datepicker table td.ui-datepicker-today > a, body .ui-datepicker table td.ui-datepicker-today > span {
+  background-color: $secondary-bg-color;
+  color: #FFFFFF;
+}
+
+body .ui-datepicker:not(.ui-state-disabled) table td a:not(.ui-state-active):not(.ui-state-highlight):hover {
+  background-color: $secondary-bg-color;
+}
+
+body .ui-datepicker table td > a, body .ui-datepicker table td > span {
+  border-radius: 0;
+}
+
+body .ui-datepicker:not(.ui-state-disabled) .ui-datepicker-header .ui-datepicker-prev:hover, body .ui-datepicker:not(.ui-state-disabled) .ui-datepicker-header .ui-datepicker-next:hover {
+  color: $hover-special;
+}
+
+body .ui-datepicker:not(.ui-state-disabled) .ui-datepicker-header .ui-datepicker-prev:focus, body .ui-datepicker:not(.ui-state-disabled) .ui-datepicker-header .ui-datepicker-next:focus {
+  box-shadow: none;
+}
+
+.ui-datepicker .ui-datepicker-buttonbar {
+  padding: 0;
+}
+
+.ui-g-6 button {
+  width: 100%;
+  @extend .main-font;
+}
+
+body .ui-button.ui-state-default.ui-button-secondary, body .ui-buttonset.ui-button-secondary > .ui-button.ui-state-default {
+  background-color: $main-bg-color;
+  color: #FFFFFF;
+  border: 0;
+}
+
+body .ui-button.ui-state-default.ui-button-secondary:enabled:hover, body .ui-buttonset.ui-button-secondary > .ui-button.ui-state-default:enabled:hover {
+  @extend .hover-effect;
+  color: #FFFFFF;
+}
+
+body .ui-button.ui-button-text-only .ui-button-text {
+  @extend .p-05-y;
+}

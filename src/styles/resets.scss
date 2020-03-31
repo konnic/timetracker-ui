@@ -1,0 +1,19 @@
+/*remove blue highlighting of element in focus*/
+*:focus {
+  outline: 0;
+  outline: none;
+}
+
+.reset-body-styles {
+  margin: 0;
+  padding: 0;
+}
+
+.reset-border-styles {
+  border: 0;
+  border-radius: 0px;
+}
+
+.reset-dropdown-styles {
+  -webkit-appearance: none;
+}

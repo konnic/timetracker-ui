@@ -1,0 +1,50 @@
+<div>
+  <form [formGroup]="timeInputForm" (ngSubmit)="onSubmit()">
+    <div class="d-flex flex-dir-row">
+      <div class="d-flex flex-dir-col p-1-y m-2-bottom m-2-right" style="justify-content: space-between;">
+        <app-date-picker
+          (selectedDate)="onDateUpdate($event)"
+          class="m-2-bottom">
+        </app-date-picker>
+        <app-dropdown
+          [formCtrName]="'dayType'"
+          [dropdownData]="timeInputSettingsService.dayOptions"
+          [timeInputForm]="timeInputForm"
+          [initialSelection]="'Work'"
+          (selectedOption)="onDayTypeUpdate($event)">
+        </app-dropdown>
+      </div>
+      <div class="time-input-grid p-1-y m-2-bottom">
+        <app-time-input *ngFor="let settings of timeInputSettingsService.timeInputSettings"
+          [timeInputForm]="timeInputForm"
+          [formCtrName]="settings.formCtrName"
+          [title]="settings.title"
+          [time]="settings.time"
+          [showSetCurrentTimeText]="settings.enableSetTime"
+          [isReadOnly]="settings.readonly"
+          (updatedTime)="onTimeUpdate($event)"
+          (setCurrentTime)="setCurrentTime($event)">
+        </app-time-input>
+      </div>
+    </div>
+    <div>
+      <span>What did you do today?</span>
+      <div class="d-flex flex-dir-row" style="justify-content: space-between">
+        <app-textarea
+          [timeInputForm]="timeInputForm"
+          [formCtrName]="'tasks'"
+          [formGrpName]="timeInputForm"
+          class="flex-grow-1">
+        </app-textarea>
+        <button
+          [disabled]="isSubmitDisabled"
+          [ngClass]="{'hover-special': !isSubmitDisabled, 'disabled-button': isSubmitDisabled}"
+          type="submit"
+          class="m-05-top hover-special p-2-x main-font reset-border-styles secondary-bg-color">
+          Save
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+

@@ -1,0 +1,12 @@
+<div class="position-relative m-2-right m-05-top">
+  <div [attr.formGroup]="formGrpName" class="d-flex">
+    <textarea
+      [attr.formControlName]="formCtrName"
+      (focus)="toggleFocusBar()"
+      (blur)="toggleFocusBar()"
+      class="textarea main-font secondary-bg-color reset-border-styles p-05 flex-grow-1 flex-shrink-0"
+      style="resize: none; overflow-y: scroll; line-height: 1.4;"
+    ></textarea>
+  </div>
+  <span *ngIf="activeInput" class="focus-bar"></span>
+</div>

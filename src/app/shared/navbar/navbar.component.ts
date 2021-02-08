@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  @Output() showNavPicker = new EventEmitter<boolean>();
+
+  public toggleNavPicker(): void {
+    this.showNavPicker.emit(true);
+  }
+
+  public login(): void {
+
+  }
 }

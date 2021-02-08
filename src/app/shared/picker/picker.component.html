@@ -1,0 +1,11 @@
+<div [ngStyle]="{'width.px': pickerWidth, 'left': orientationLeft ? 0 : null, 'right': orientationLeft ? null : 0}"
+     [ngClass]="{'slide-out': slideoutAnimationActive}"
+     class="position-absolute top-0 height-100 secondary-bg-color picker-shadow slide-in">
+  <header class="d-flex space-between main-font p-1 flex-shrink-0">
+    <span class="p-05 line-height-20">{{title}}</span>
+    <img (click)="closePicker()"
+         class="p-05 hover-effect"
+         src="../../../assets/svg/i-close.svg">
+  </header>
+  <ng-content></ng-content>
+</div>

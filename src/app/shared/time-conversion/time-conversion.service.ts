@@ -83,6 +83,8 @@ export class TimeConversionService {
       minutes = parseInt(timeString.split(':')[1], 10);
       // ensure that no leading zero is missing
       correctedTimeString = this.addLeadingZero(hours, minutes);
+    } else {
+      return null;
     }
 
     return correctedTimeString;

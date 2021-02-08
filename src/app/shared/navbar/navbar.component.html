@@ -1,11 +1,11 @@
-<nav class="navbar-container secondary-bg-color">
-    <span routerLink="/enter-hours" routerLinkActive="active-nav-item" class="navbar-content p-1-y">
-      ENTER HOURS
-    </span>
-    <span routerLink="/dashboard" routerLinkActive="active-nav-item" class="navbar-content p-1-y navbar-border-center">
-      DASHBOARD
-    </span>
-    <span routerLink="/settings" routerLinkActive="active-nav-item" class="navbar-content p-1-y">
-      SETTINGS
-    </span>
+<nav class="secondary-bg-color d-flex space-between">
+  <img (click)="toggleNavPicker()"
+       src="../../../assets/svg/i-hamburger-menu.svg"
+       class="m-2-left p-1 hover-effect main-color">
+  <span class="p-1-y line-height-20">Timetracker</span>
+  <span (click)="login()"
+        routerLink="/login"
+        class="m-2-right p-1 hover-effect line-height-20">
+    Login
+  </span>
 </nav>

@@ -1,5 +1,5 @@
 $directions: top, bottom, left, right;
-$steps: 1, 2, 3;
+$steps: 0, 1, 2, 3;
 
 @mixin calcMarginPadding($prefix, $target) {
   @each $step in $steps {

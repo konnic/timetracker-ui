@@ -1,0 +1,33 @@
+@import '../../../styles/variables';
+
+.picker-shadow {
+  box-shadow: -5px 0 5px 10px $main-bg-color
+}
+
+.slide-in {
+  animation-duration: 0.5s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.slide-out {
+  animation-duration: 1s;
+  animation-name: slideout;
+}
+
+@keyframes slideout {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}

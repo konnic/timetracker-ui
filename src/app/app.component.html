@@ -1,5 +1,9 @@
-<app-navbar class="main-font"></app-navbar>
+<app-navbar (showNavPicker)="toggleNavPicker($event)" class="main-font"></app-navbar>
 <div class="p-2 main-font">
   <router-outlet></router-outlet>
 </div>
-
+<app-picker *ngIf="showNavPicker"
+            [title]="'Navigation Options'"
+            (showNavPicker)="toggleNavPicker($event)">
+  <app-vertical-nav></app-vertical-nav>
+</app-picker>

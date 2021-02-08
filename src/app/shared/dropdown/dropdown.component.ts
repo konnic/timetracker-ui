@@ -15,7 +15,7 @@ export class DropdownComponent implements OnInit {
 
   public hideOptions = true;
   public selection: string;
-  public arrowDownSrc = '../../../assets/img/arrow-down.png';
+  public arrowDownSrc = '../../../assets/img/i-arrow-down.png';
 
   constructor() {}
 

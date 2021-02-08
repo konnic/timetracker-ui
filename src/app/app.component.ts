@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'timetracker';
+  public title = 'timetracker';
+  public showNavPicker = false;
+
+  toggleNavPicker(showNavPicker: boolean) {
+    this.showNavPicker = showNavPicker;
+  }
 }

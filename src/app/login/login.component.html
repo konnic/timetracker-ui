@@ -1,0 +1,16 @@
+<div class="d-flex d-flex-center">
+  <div class="d-flex flex-dir-col">
+    <label class="label-font-size">Username</label>
+    <input [(ngModel)]="username" type="text" class="main-font secondary-bg-color reset-border-styles p-05 m-2-bottom">
+    <label class="label-font-size">Password</label>
+    <input [(ngModel)]="password" type="password" class="main-font secondary-bg-color reset-border-styles p-05 m-2-bottom">
+    <button
+      (click)="login()"
+      class="reset-border-styles main-font secondary-bg-color hover-special p-05">Login</button>
+    <span *ngIf="success">{{success}}</span>
+  </div>
+</div>
+
+
+
+

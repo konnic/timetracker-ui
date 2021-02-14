@@ -46,7 +46,7 @@ describe('TimeInputComponent', () => {
 
     // trigger blur event binding on input element
     inputEl.triggerEventHandler('blur', null);
-    expect(emittedValue).toBe('fcn');
+    expect(emittedValue).toBeUndefined();
   });
 
   it('should trigger setCurrentTime @Output on click event', () => {

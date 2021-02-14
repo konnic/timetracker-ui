@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'timetracker';
+  public title: string = 'timetracker';
+  public prod: boolean = environment.production;
+
+  constructor() {
+    console.log(this.prod ? 'PROD BUILD' : 'DEV BUILD');
+  }
 }

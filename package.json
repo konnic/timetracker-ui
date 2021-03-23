@@ -9,8 +9,8 @@
     "test:headless": "ng test --browsers HeadlessChrome --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "docker-build:prod": "docker build -t timetracker-ui:prod .",
-    "docker-build:dev": "docker build -t timetracker-ui:dev --build-arg configuration='' ."
+    "docker-build:prod": "docker build -t tt-ui:prod .",
+    "docker-build:dev": "docker build -t tt-ui:dev --build-arg configuration='' ."
   },
   "private": true,
   "dependencies": {

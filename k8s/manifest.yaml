@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tt-ui-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tt-ui
+  template:
+    metadata:
+      labels:
+        app: tt-ui
+    spec:
+      containers:
+        - name: tt-ui-container
+          image: de.icr.io/konnic/timetracker-ui:prod
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tt-ui
+spec:
+  selector:
+    app: tt-ui
+  ports:
+    - protocol: "TCP"
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
